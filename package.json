@@ -1,6 +1,6 @@
 {
   "name": "use-keyframes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom hook to simulate some basic use of the &#x60;@keyframes&#x60; on the CSS, but using only inline-style and JS",
   "author": "pdrmdrs",
   "license": "MIT",

@@ -63,6 +63,8 @@ function App() {
 }
 ```
 
+Or you can check on the sandbox example [here](https://codesandbox.io/s/keyframes-without-keyframes-sisns?file=/src/index.tsx)
+
 ## License
 
 MIT © [pdrmdrs](https://github.com/pdrmdrs)
