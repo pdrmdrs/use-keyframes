@@ -6,8 +6,16 @@
 
 ## Install
 
+With npm
+
 ```bash
 npm install --save use-keyframes
+```
+
+or using yarn
+
+```bash
+yarn add use-keyframes
 ```
 
 ## Usage
@@ -15,13 +23,43 @@ npm install --save use-keyframes
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'use-keyframes'
-import 'use-keyframes/dist/index.css'
+import useKeyframes from 'use-keyframes'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
+function App() {
+  const [opacity, timeInSeconds] = useKeyframes<number>({
+    initialValue: 1,
+    toValue: 0,
+    timeInSeconds: 0.75
+  })
+  const style: React.CSSProperties = {
+    width: 100,
+    height: 100,
+    background: 'gray',
+    marginTop: '10px',
+    marginLeft: '10px',
+    float: 'left',
+    opacity,
+    position: 'relative',
+    transition: `opacity ${timeInSeconds}s linear`
   }
+  return (
+    <View
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: 'black',
+        overflow: 'hidden'
+      }}
+    >
+      <View style={style} />
+      <View style={style} />
+      <View style={style} />
+      <View style={style} />
+    </View>
+  )
 }
 ```
 
